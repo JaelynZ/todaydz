@@ -1,0 +1,118 @@
+
+.ceil{
+    width: 20%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: 1px solid #f7f7f8;
+    border-bottom: 1px solid #f7f7f8;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+    background-color: #fff;
+}
+
+.home-class{
+    zoom: 1;
+
+}
+
+.content{
+    max-width: 1080px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #fafafa;
+
+}
+.search_input{
+    display: inline-flex;;
+}
+.header {
+    /* position: relative; */
+    z-index: 3;
+    width: 100%;
+    height: 2.2rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0.48rem 0 0.4rem;
+    background: #f7f7f8;
+    overflow: hidden;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.wap-search1{
+    width: 100%;
+    padding: 0 17px 0;
+    background-color: #fff;
+
+}
+.wap-event-counter{
+    line-height: 2.2rem;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.header .search-input-text:hover {
+    cursor: pointer;
+}
+.header .search-input-text {
+    margin-top: 0.4rem;
+    padding-left: 0.24rem;
+    width: 6.3rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    color: #999;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFW…JiWLIpGbZHWZdo7NNKigCyvYqIJyXFheSenZK8x2D2PwEGAPjM8Yd2adnnAAAAAElFTkSuQmCC) no-repeat 5.6rem center #e4e4e5;
+    background-size: 0.48rem 0.48rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.header .search-input-text {
+    float: right;
+}
+div, span, header {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo{
+    margin-top: 3px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    background: url(../images/icons/homepage_search.png?t=20181012051) center center no-repeat;
+    background-size: auto 18px;
+    border: none;
+    outline: none;
+}
+
+.com-nav .item .price-sort em.up {
+    background: url(../images/icons/list_up.png?t=20181012051) center center no-repeat;
+}
+.com-nav .item .price-sort em {
+    width: 8px;
+    height: 12px;
+    line-height: 12px;
+    display: inline-block;
+    float: right;
+    margin: 14px 0 auto 3px;
+    background-size: auto 100% !important;
+    background: url(../images/icons/list_normal.png?t=20181012051) center center no-repeat;
+}

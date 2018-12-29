@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="今日打折,9.9包邮,九块九包邮,淘宝优惠券,淘宝网今日特价女装,todaydz,今日打折网">
+    <meta name="Description" Content="今日打折是一个电商导购平台,今日打折每日海量提供淘宝优惠券,特卖1折起,9快9包邮，超值5元购，19.9包邮等宝贝，欢迎来今日打折选购">
+    <title>今日打折</title>
+    <script type="text/javascript" src="static/mobile/js/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="static/mobile/js/jquery/jquery.cookies.js"></script>
+    <script type="text/javascript" src="static/mobile/js/loadmore.js"></script>
+    <!--<link rel="stylesheet" href="../css/main.css" media="all" />-->
+    <link rel="stylesheet" href="static/mobile/css/common.css"  />
+    <link rel="stylesheet" href="static/mobile/css/normalize.css"  />
+    <link rel="stylesheet" href="static/mobile/css/swiper.min.css"  />
+    <link rel="stylesheet" href="static/mobile/css/wap.css"  />
+    <link rel="stylesheet" href="static/mobile/css/base.css"  />
+
+
+    <script>
+
+        var isInit=false;
+        $(document).ready(function (e) {
+
+            if(!isInit){
+                initSort();
+                console.log("run it")
+                var params=getRequest();
+                loadmore(1, params.id,config.sort);
+                listensClass();
+                isInit=true;
+            }
+
+
+        });
+
+
+    </script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+</head>
+
+
+<body>
+
+<div class="content">
+
+
+    <div class="header">
+
+
+        <div class="logo"><a href="/"><img src="static/mobile/images/icons/logo.png" alt="今日打折"></a></div>
+
+        <div class="wap-search1">
+            <form method="get" action="./mobilewebSearch.html" class="search-area">
+                <input type="text" class="wap-event-counter" data-counter="'ea=WAP官网-搜索'" name="title"
+                       placeholder="关键词">
+                <button class="search-btn wapUmCountEv wap-clk-counter" type="submit" cnzz-data="wap-搜索"
+                        data-um="'WAP首页-搜索','点击','','',''" data-counter="'ea=WAP官网-搜索'"></button>
+            </form>
+
+            <
+        </div>
+
+
+    </div>
+    <form id="web_search_form" class="flex com-nav b-shadow bd"  method="get">
+
+        <div class="flex-col item" id="sort_1"><a data-counter="'ea=WAP官网搜索-筛选-人气'" data-val="1" href="javascript:;"
+                                             onclick="sort(1);" class="wap-clk-counter">人气</a></div>
+        <div class="flex-col item  active" id="sort_2"><a data-counter="'ea=WAP官网搜索-筛选-最新'" data-val="2" href="javascript:;"
+                                       onclick="sort(2);" class="wap-clk-counter">最新</a></div>
+        <div class="flex-col item " id="sort_3"><a data-counter="'ea=WAP官网搜索-筛选-销量'" data-val="3" href="javascript:;"
+                                       onclick="sort(3);" class="wap-clk-counter">销量</a></div>
+        <div class="flex-col item " id="sort_4">
+            <a cnzz-data="wap-搜后-价格排序" data-counter="'ea=WAP官网搜索-筛选-价格'" data-val="4" class="wap-clk-counter"
+               href="javascript:;" onclick="sort(4);">
+                <span class="price-sort">价格<em id="price_dirction" class=""></em></span>
+            </a>
+        </div>
+
+
+
+
+    </form>
+    <div class="home-list" id="js_search_list">
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+</html>

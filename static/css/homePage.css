@@ -1,0 +1,393 @@
+body{text-align: center;}
+#center{ margin-right: auto;
+    margin-left: auto;
+    height:200px;
+    background:#f00;
+    width:400px;
+    vertical-align:middle;
+    line-height:200px;
+}
+
+.area{
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    text-align: center;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background: #FFFFFF;
+    border-bottom: 2px solid #E53243;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    margin-bottom: 25px;
+}
+.content{
+    width: 1200px;
+    height: 100%;
+    #background: #0ba2f0;
+    margin-bottom: 25px;
+    #margin-left: 20%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer{
+    width: 100%;
+    height: 60px;
+    background: #34383B;
+    border-top: 2px solid #E53243;
+}
+.hc{
+    height: 100%;
+    width: 1200px;
+    #margin-left: 20%;
+    background: #FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+}
+.mc{
+    height: 100%;
+    width: 1200px;
+    #margin-left: 20%;
+    #background: #00ee00;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fc{
+    height: 100%;
+    width: 1200px;
+    #margin-left: 20%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo{
+    float:left;
+    width: 120px;
+    padding: 5px;
+    text-align: center;
+}
+
+.searchIpt{
+    width: 30%;
+    height: 34px;
+    cursor: text;
+    float:left;
+    margin-left: 35%;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #eee;
+    border-style:none;
+}
+.searchBtn{
+    width: 80px;
+    height: 36px;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    background: red;
+    font-size: 20px;
+    color: white;
+    line-height: 36px;
+}
+.mct{
+    width: auto;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 17px;
+    transition: color 0.2s;
+    float: left;
+}
+
+.mct-select{
+    background-color: #E64C3E;
+    color: white
+}
+
+.content-tab{
+    width: 100%;
+    height:50px;
+    border-bottom: 2px solid #EBEBEB;
+    background-color: white;
+}
+.content-condition{
+    width: 100%;
+    height:50px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.content-list{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.content-page{
+    width: 100%;
+    height:50px;
+    border-bottom: 2px solid #EBEBEB;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.cct{
+    width: auto;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 17px;
+    transition: color 0.2s;
+    float: left;
+}
+.ccc{
+    width: auto;
+    font-size: 13px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 9px;
+    transition: color 0.2s;
+    float: left;
+    margin-right: 10px;
+}
+
+.cc-check{
+    width: auto;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+.good-out-border{
+    width: 300px;
+    height: 435px;
+    background-color: #F5F5F5;
+    text-align: center;
+    float: left;
+}
+.good-inner-border{
+    width: 290px;
+    height: 425px;
+    background-color: #FFFFFF;
+    text-align:center;
+    display: inline-block;
+    margin-top: 5px;
+}
+.good-pic-box{
+    width: 268px;
+    height: 268px;
+    text-align:center;
+    display: inline-block;
+    margin-top: 5px;
+}
+.good-pic-url{
+    width: 268px;
+    height: 268px;
+}
+.good-pic{
+    width: 268px;
+    height: 268px;
+}
+.good-title-box{
+    width: 268px;
+    height: 24px;
+    text-align:center;
+    display: inline-block;
+    margin-top: 20px;
+}
+.good-title-url{
+    width: 268px;
+    height: 24px;
+    text-decoration: none;
+}
+.good-title{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Simsun;
+    font-size: 14px;
+    color: black;
+}
+.good-price-box{
+    width: 268px;
+    height: 33px;
+    text-align:center;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.good-price-left{
+    color: #ff6600;
+    overflow: hidden;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-size: 14px;
+}
+.good-price-right{
+    font-size: 14px;
+    padding-top: 10px;
+    color: #8a8a8a;
+    float: right;
+}
+.good-price-icon{
+    margin-right: 3px;
+    font-size: 14px;
+    float: left;
+    color: #a8a5a5;
+    margin: 3px 5px 0 0;
+}
+.good-price-num-font{
+    color: #ff6600;
+    vertical-align: bottom;
+    font-family: Arial !important;
+    font-size: 14px;
+}
+.good-commission-box{
+    color: #969696;
+    font-size: 12px;
+    overflow: hidden;
+    margin-top: 5px;
+    width: 268px;
+    height: 21px;
+    text-align:center;
+    display: inline-block;
+}
+.good-commission-item{
+    float: left;
+}
+.percent{
+    color: #48aade;
+    font-size: 16px;
+    font-weight: bold;
+}
+.float{
+    color: #48aade;
+    font-size: 16px;
+    font-weight: bold;
+}
+.good-group-icons-box{
+    margin-top: 5px;
+    vertical-align: bottom;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #FFF;
+    width: 268px;
+    height: 21px;
+    text-align:center;
+    display: inline-block;
+}
+.good-group-coupon{
+    font-size: 12px;
+    color: #929292;
+    width: auto;
+    height: 21px;
+    line-height: 21px;
+    float: left;
+}
+.good-group-coupon-url{
+    cursor: pointer;
+    float: left;
+}
+.good-group-coupon-icon{
+    width: 44px !important;
+    height: 21px;
+    line-height: 21px;
+    background-image: url(../images/icon1.png?t=20180927003);
+}
+.good-group-coupon-price{
+    display: inline-block;
+    width: auto;
+    height: 19px;
+    line-height: 19px;
+    padding: 0 3px;
+    text-align: center;
+    color: #ff4400;
+    border: 1px solid #ff4400;
+    border-left: none;
+    float: left;
+}
+.good-group-flag{
+    float: right;
+}
+.good-group-panic-flag{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: right;
+    margin: 7px auto auto 5px;
+    position: relative;
+    background-image: url(../images/icon1.png?t=20180927003);
+}
+.good-group-tmall-flag{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: right;
+    margin: 7px auto auto 5px;
+    position: relative;
+    background-image: url(../images/icon1.png?t=20180927003);
+}
+
+.price-input {
+    padding: 0 7px;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ebebeb;
+    float: left;
+    margin-top: 13px;
+}
+
+.price-span {
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+p#back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+p#back-to-top a {
+    text-align: center;
+    text-decoration: none;
+    color: #d1d1d1;
+    display: block;
+    width: 50px;
+    /*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+    -moz-transition: color 1s;
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;
+}
+p#back-to-top a:hover {
+    color: #979797;
+}
+p#back-to-top a span {
+    background: #d1d1d1 url(../images/gotop.png) no-repeat center center;
+    border-radius: 6px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+    /*使用CSS3中的transition属性给<span>标签背景颜色添加渐变效果*/
+    -moz-transition: background 1s;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+}
+
+#back-to-top a:hover span {
+    background: #979797 url(../images/gotop.png) no-repeat center center;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>今日打折</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=11,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="今日打折,9.9包邮,九块九包邮,淘宝优惠券,淘宝网今日特价女装,todaydz,今日打折网">
+    <meta name="Description" Content="今日打折是一个电商导购平台,今日打折每日海量提供淘宝优惠券,特卖1折起,9快9包邮，超值5元购，19.9包邮等宝贝，欢迎来今日打折选购">
+    <link rel="SHORTCUT ICON" href="./static/images/favicon.ico"/>
+</head>
+
+<script src="./static/js/jquery/jquery-2.1.1.min.js"></script>
+<script src="./static/js/api.js"></script>
+<script src="./static/js/homePage.js"></script>
+<link rel="stylesheet" href="./static/css/homePage.css">
+<link rel="stylesheet" href="./static/css/paging.css">
+<script src="./static/js/paging.js"></script>
+<body id="top">
+    <div class="area">
+        <div class="header">
+            <div class="hc" >
+                <span onclick="window.location.href=''"><img class="logo" src="./static/images/logo.png"></span>
+                <input id="search" class="searchIpt" type="text" placeholder="关键词 / 链接 / 品牌 / ID" maxlength="500"/>
+                <button class="searchBtn" onclick="search()" >搜索</button>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="mc">
+                <a id="goodBank" class="mct" onclick="loadGoodBankTab()">商品库</a>
+                <a id="hot" class="mct" onclick="loadHotTab()">爆款</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-tab">
+                <a class="cct" id="cat0" style="color: #FF4400" onclick="setCat(0)">全部</a>
+                <a class="cct" id="cat10" onclick="setCat(10)">女装</a>
+                <a class="cct" id="cat11" onclick="setCat(11)">内衣</a>
+                <a class="cct" id="cat12" onclick="setCat(12)">男装</a>
+                <a class="cct" id="cat2" onclick="setCat(2)">母婴</a>
+                <a class="cct" id="cat3" onclick="setCat(3)">美妆</a>
+                <a class="cct" id="cat4" onclick="setCat(4)">居家</a>
+                <a class="cct" id="cat5" onclick="setCat(5)">鞋包配饰</a>
+                <a class="cct" id="cat6" onclick="setCat(6)">美食</a>
+                <a class="cct" id="cat7" onclick="setCat(7)">文体</a>
+                <a class="cct" id="cat8" onclick="setCat(8)">家电数码</a>
+            </div>
+            <div id="conditionDiv" class="content-condition">
+                <a class="ccc" id="sort1" style="color: #FF4400" onclick="setSort(1)">
+                    人气降序
+                </a>
+                <a class="ccc" id="sort2" onclick="setSort(2)">
+                    最新降序
+                </a>
+                <a class="ccc" id="sort3" onclick="setSort(3)">
+                    销量降序
+                </a>
+                <a class="ccc" id="sort4" onclick="setSort(4)">
+                    价格升序
+                </a>
+                <a class="ccc" >
+                    <input type="checkbox" id="is_new" title="今日新品" value="1" />今日新品
+                </a>
+                <a class="ccc">
+                    <input type="checkbox" id="is_ju" title="聚划算" value="1" />聚划算
+                </a>
+                <a class="ccc">
+                    <input type="checkbox" id="is_tqg" title="淘抢购" value="1" />淘抢购
+                </a>
+
+                <a class="ccc">
+                    <div style="float: left;margin-right: 20px;">
+                        <span class="price-span">价格区间≥&nbsp;</span>
+                        <input class="price-input" type="text" maxlength="8" id="min_price" placeholder="¥" value="">
+                        <span class="price-span">&nbsp;-&nbsp;</span>
+                        <input class="price-input" type="text" maxlength="8" id="max_price" placeholder="¥" value="">
+                    </div>
+                </a>
+
+            </div>
+            <div class="content-list">
+                <!--<div class="good-out-border">
+                    <div class="good-inner-border">
+                        <div class="good-pic-box">
+                            <a class="good-pic-url" target="_blank" href="">
+                                <img class="good-pic" src="https://img.alicdn.com/imgextra/i4/2260453576/TB2fypgjRjTBKNjSZFwXXcG4XXa_!!2260453576.jpg_310x310.jpg">
+                            </a>
+                        </div>
+                        <div class="good-title-box">
+                            <a class="good-title-url" rel="nofollow" target="_blank" href="" >
+                                <p class="good-title" title="尚贡2018新货 桂圆 桂圆干500gX2袋莆田特产4A非无核龙眼肉干">
+                                    尚贡2018新货 桂圆 桂圆干500gX2袋莆田特产4A非无核龙眼肉干
+                                </p>
+                            </a>
+                        </div>
+                        <div class="good-price-box">
+                            <div class="good-price-left">
+                                <span class="good-price-icon">券后 <i class="good-price-num-font">¥</i></span>
+                                <span class="good-price-num"> 14.8元</span>
+                            </div>
+                            <div class="good-price-right">月销：99591</div>
+                        </div>
+                        <div class="good-price-box">
+                            <div class="good-price-left">
+                                <span class="good-price-icon">优惠券 <i class="good-price-num-font">¥</i></span>
+                                <span class="good-price-num"> 14.8元</span>
+                            </div>
+                            <div class="good-price-right">余量：99591</div>
+                        </div>
+                        &lt;!&ndash;<div class="good-commission-box">
+                            <div class="good-commission-item">
+                                佣比：<span class="percent">20</span><span class="float">%</span>&nbsp;(3元)
+                            </div>
+                        </div>
+                        <div class="good-group-icons-box">
+                            <div class="good-group-coupon">
+                                <a class="good-group-coupon-url"
+                                   href="https://uland.taobao.com/quan/detail?sellerId=2081100909&amp;activityId=1688119f19694e6bafd4175e86860180&amp;xi=531494128831"
+                                   rel="nofollow" target="_blank">
+                                    <span class="good-group-coupon-icon"></span>
+                                    <span class="good-group-coupon-price">3元</span>
+                                </a>
+                            </div>
+                            <div class="good-group-flag">
+                                <span class="good-group-panic-flag" data-txt="淘抢购"></span>
+                                <span class="good-group-tmall-flag" data-txt="天猫"></span>
+                            </div>
+                        </div>&ndash;&gt;
+                    </div>
+                </div>-->
+            </div>
+
+            <div id="pageDiv" class="content-page">
+                <div class="pagger" id="pagger"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fc">
+                <a style="color: white;margin-top: 30px;position: absolute;" target="view_window" href="http://tool.todaydz.com/">淘口令工具</a>
+                <!--<a style="color: white;margin-top: 30px;position: absolute;margin-left: 100px;" target="view_window" href="http://118.25.178.112:80/">今日打折旧版</a>-->
+            </div>
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1265299569'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1265299569%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+        </div>
+        <p id="back-to-top"><a href="#top"><span></span></a></p>
+    </div>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+
+        $(document).ready(function () {
+
+            //首先将#back-to-top隐藏
+            $("#back-to-top").hide();
+
+            //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 100) {
+                        $("#back-to-top").fadeIn(1500);
+                    }
+                    else {
+                        $("#back-to-top").fadeOut(1500);
+                    }
+                });
+                //当点击跳转链接后，回到页面顶部位置
+                $("#back-to-top").click(function () {
+                    $('body,html').animate({ scrollTop: 0},500);
+                    return false;
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
